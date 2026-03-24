@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} · {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    <div class="page">
+      <aside class="sidebar">
+        <div class="profile">
+          <img class="avatar" src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}">
+          <h1 class="name">{{ site.author.name }}</h1>
+          <p class="role">{{ site.author.role }}</p>
+          <p class="bio">{{ site.author.bio }}</p>
+          <p class="location">{{ site.author.location }}</p>
+          <div class="links">
+            {% for link in site.author.links %}
+              <a href="{{ link.url }}">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="site-header">
+          <div>
+            <div class="site-title">{{ site.title }}</div>
+            <div class="site-description">{{ site.description }}</div>
+          </div>
+          <nav class="site-nav">
+            <a href="{{ "/" | relative_url }}">Home</a>
+          </nav>
+        </header>
+
+        <article class="page-content">
+          {{ content }}
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

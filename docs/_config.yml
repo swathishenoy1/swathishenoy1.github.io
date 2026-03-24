@@ -1,0 +1,28 @@
+title: Swathi Shenoy
+email: ""
+description: "Notes on system design, architecture, and distributed systems."
+baseurl: ""
+url: ""
+
+author:
+  name: Swathi Shenoy
+  role: "Software Engineer"
+  location: "India"
+  bio: "I write concise, practical notes on system design and backend engineering."
+  avatar: "/assets/images/profile.jpg"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/swathishenoy1"
+    - label: "LinkedIn"
+      url: "https://www.linkedin.com/"
+
+markdown: kramdown
+permalink: /:categories/:title/
+show_excerpts: true
+excerpt_separator: "\n\n"
+timezone: Asia/Kolkata
+
+collections_dir: ""
+
+exclude:
+  - .DS_Store
