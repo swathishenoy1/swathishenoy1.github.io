@@ -63,12 +63,17 @@ Kafka is best thought of as a:
 6. Fan-out scenarios
 
 ### ❌ Avoid Kafka when:
-- Ultra-low latency (< few ms) is required → prefer RPC / direct APIs
-- Simple queue use-case → Kafka may be overkill
-- Small-scale systems → operational overhead is high
-- Strict global ordering is required (Kafka guarantees ordering only per partition)
+1. Ultra-low latency (< few ms) is required → prefer RPC / direct APIs
+2. Simple queue use-case → Kafka may be overkill
+3. Small-scale systems → operational overhead is high
+4. Strict global ordering is required (Kafka guarantees ordering only per partition)
 
 ## 🔬 Deep Dive Topics (Interview Focus)
 1. Partitioning Strategy
 2. Replication & Fault Tolerance
 3. Delivery Semantics
+4. Ordering guarantees
+
+## References:
+https://www.hellointerview.com/learn/system-design/deep-dives/kafka
+
