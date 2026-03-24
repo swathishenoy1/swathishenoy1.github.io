@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en" }}" data-theme="dark">
+<html lang="{{ site.lang | default: "en" }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +21,7 @@
       })();
     </script>
   </head>
-  <body>
+  <body data-theme="dark">
     <div class="page">
       <aside class="sidebar">
         <div class="profile">
@@ -48,6 +48,7 @@
             <a href="{{ "/" | relative_url }}">Home</a>
             <button class="theme-toggle" type="button" aria-label="Toggle theme">
               <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+              <span class="theme-toggle__label">Theme</span>
             </button>
           </nav>
         </header>
@@ -59,20 +60,23 @@
     </div>
     <script>
       (function () {
-        var root = document.documentElement;
+        var root = document.body || document.documentElement;
         var toggle = document.querySelector(".theme-toggle");
         var icon = document.querySelector(".theme-toggle__icon");
         if (!toggle || !icon) return;
 
         function setTheme(theme) {
           root.setAttribute("data-theme", theme);
+          document.documentElement.setAttribute("data-theme", theme);
           try {
             localStorage.setItem("theme", theme);
           } catch (e) {}
           icon.textContent = theme === "light" ? "☀" : "☾";
         }
 
-        var current = root.getAttribute("data-theme") || "dark";
+        var current = root.getAttribute("data-theme") ||
+          document.documentElement.getAttribute("data-theme") ||
+          "dark";
         setTheme(current);
 
         toggle.addEventListener("click", function () {

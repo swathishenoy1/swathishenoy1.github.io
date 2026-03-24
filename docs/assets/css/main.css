@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap");
 
 :root {
-  --bg: #0f131a;
-  --panel: #151b24;
-  --ink: #e7edf5;
-  --muted: #9aa6b2;
-  --accent: #7bd5ff;
-  --accent-2: #f4b183;
-  --border: #222a36;
-  --bg-grad-1: rgba(123, 213, 255, 0.12);
-  --bg-grad-2: rgba(244, 177, 131, 0.1);
-  --bg-overlay-1: rgba(15, 19, 26, 0.9);
-  --bg-overlay-2: rgba(15, 19, 26, 0.95);
-  --sidebar-bg: linear-gradient(160deg, #141b26 0%, #111720 60%, #0f141c 100%);
-  --avatar-border: #0f141c;
+  --bg: #0b1020;
+  --panel: #111827;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-2: #f59e0b;
+  --border: #1f2937;
+  --bg-grad-1: rgba(56, 189, 248, 0.14);
+  --bg-grad-2: rgba(245, 158, 11, 0.08);
+  --bg-overlay-1: rgba(11, 16, 32, 0.92);
+  --bg-overlay-2: rgba(11, 16, 32, 0.96);
+  --sidebar-bg: linear-gradient(160deg, #0f172a 0%, #0b1222 60%, #0a0f1c 100%);
+  --avatar-border: #0b1020;
 }
 
-[data-theme="light"] {
+body[data-theme="light"],
+html[data-theme="light"] body {
   --bg: #f6f1ea;
   --panel: #ffffff;
   --ink: #1f2a2d;
@@ -154,14 +155,21 @@ body {
   background: var(--panel);
   color: var(--ink);
   border-radius: 999px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   cursor: pointer;
   font-size: 14px;
   line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .theme-toggle:hover {
   border-color: var(--accent);
+}
+
+.theme-toggle__label {
+  font-weight: 600;
 }
 
 .page-content {
