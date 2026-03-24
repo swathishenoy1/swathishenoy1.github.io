@@ -75,5 +75,5 @@ Kafka is best thought of as a:
 4. Ordering guarantees
 
 ## References:
-https://www.hellointerview.com/learn/system-design/deep-dives/kafka
+[hello interview - Kafka](https://www.hellointerview.com/learn/system-design/deep-dives/kafka)
 
