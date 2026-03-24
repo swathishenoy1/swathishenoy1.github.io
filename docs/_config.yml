@@ -6,7 +6,7 @@ url: ""
 
 author:
   name: Swathi Shenoy
-  role: "Software Engineer"
+  role: "Software Engineer - AWS, Microservice and distributed Systems|Mom|Aspiring AI Engineer"
   location: "India"
   bio: "I write concise, practical notes on system design and backend engineering."
   avatar: "/assets/images/profile.jpg"
@@ -14,7 +14,7 @@ author:
     - label: "GitHub"
       url: "https://github.com/swathishenoy1"
     - label: "LinkedIn"
-      url: "https://www.linkedin.com/"
+      url: "https://www.linkedin.com/in/swathi-shenoy-ba422171"
 
 markdown: kramdown
 permalink: /:categories/:title/

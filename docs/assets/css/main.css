@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Source+Sans+3:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap");
 
 :root {
-  --bg: #f6f1ea;
-  --panel: #ffffff;
-  --ink: #1f2a2d;
-  --muted: #5c6b70;
-  --accent: #0f6b6b;
-  --accent-2: #d07a5a;
-  --border: #e4ddd3;
+  --bg: #0f131a;
+  --panel: #151b24;
+  --ink: #e7edf5;
+  --muted: #9aa6b2;
+  --accent: #7bd5ff;
+  --accent-2: #f4b183;
+  --border: #222a36;
 }
 
 * {
@@ -17,7 +17,10 @@
 body {
   margin: 0;
   font-family: "Source Sans 3", system-ui, sans-serif;
-  background: radial-gradient(circle at top left, #f7efe5 0%, #f2e8dc 35%, #f6f1ea 100%);
+  background:
+    radial-gradient(circle at top left, rgba(123, 213, 255, 0.12) 0%, rgba(15, 19, 26, 0.9) 45%),
+    radial-gradient(circle at bottom right, rgba(244, 177, 131, 0.1) 0%, rgba(15, 19, 26, 0.95) 55%),
+    var(--bg);
   color: var(--ink);
 }
 
@@ -29,7 +32,7 @@ body {
 
 .sidebar {
   padding: 48px 32px;
-  background: linear-gradient(160deg, #fff8f0 0%, #f8efe6 60%, #f1e6d9 100%);
+  background: linear-gradient(160deg, #141b26 0%, #111720 60%, #0f141c 100%);
   border-right: 1px solid var(--border);
 }
 
@@ -43,12 +46,12 @@ body {
   height: 140px;
   border-radius: 18px;
   object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border: 4px solid #0f141c;
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.35);
 }
 
 .name {
-  font-family: "Merriweather", serif;
+  font-family: "Playfair Display", serif;
   font-size: 28px;
   margin: 16px 0 6px;
 }
@@ -91,7 +94,7 @@ body {
 
 .links a:hover {
   background: var(--accent);
-  color: #fff;
+  color: #0f141c;
 }
 
 .content {
@@ -109,7 +112,7 @@ body {
 }
 
 .site-title {
-  font-family: "Merriweather", serif;
+  font-family: "Playfair Display", serif;
   font-size: 26px;
 }
 
@@ -138,12 +141,12 @@ body {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 20px 24px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.35);
 }
 
 .post-card h2 {
   margin-top: 0;
-  font-family: "Merriweather", serif;
+  font-family: "Playfair Display", serif;
 }
 
 .post-meta {
@@ -163,7 +166,7 @@ body {
 }
 
 .post-title {
-  font-family: "Merriweather", serif;
+  font-family: "Playfair Display", serif;
   font-size: 34px;
   margin-bottom: 8px;
 }
