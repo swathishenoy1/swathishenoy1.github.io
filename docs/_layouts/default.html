@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }} · {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script>
+      (function () {
+        var saved = localStorage.getItem("theme");
+        if (saved) {
+          document.documentElement.setAttribute("data-theme", saved);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div class="page">
@@ -31,6 +39,9 @@
           </div>
           <nav class="site-nav">
             <a href="{{ "/" | relative_url }}">Home</a>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <span class="theme-toggle__icon" aria-hidden="true">☾</span>
+            </button>
           </nav>
         </header>
 
@@ -39,5 +50,6 @@
         </article>
       </main>
     </div>
+    <script src="{{ "/assets/js/theme.js" | relative_url }}"></script>
   </body>
 </html>
