@@ -1,3 +1,8 @@
+---
+layout: page
+title: Kafka
+---
+
 # Kafka
 
 This document provides a one-page overview of key Kafka concepts for system design interview preparation.
