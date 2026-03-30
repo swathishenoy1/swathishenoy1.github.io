@@ -150,6 +150,31 @@ body {
   font-weight: 600;
 }
 
+.search {
+  display: inline-flex;
+  align-items: center;
+}
+
+.search__input {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 14px;
+  min-width: 180px;
+}
+
+.search__input::placeholder {
+  color: var(--muted);
+}
+
+.search__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+}
+
 .theme-toggle {
   border: 1px solid var(--border);
   background: var(--panel);

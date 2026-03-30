@@ -45,6 +45,9 @@
           </div>
           <nav class="site-nav">
             <a href="{{ "/" | relative_url }}">Home</a>
+            <div class="search">
+              <input class="search__input" type="search" placeholder="Search articles" aria-label="Search articles">
+            </div>
             <button class="theme-toggle" type="button" aria-label="Toggle theme">
               <span class="theme-toggle__icon" aria-hidden="true">☾</span>
               <span class="theme-toggle__label">Theme</span>
@@ -81,6 +84,34 @@
         toggle.addEventListener("click", function () {
           var next = (root.getAttribute("data-theme") || "dark") === "dark" ? "light" : "dark";
           setTheme(next);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var input = document.querySelector(".search__input");
+        var list = document.querySelector(".post-list");
+        if (!input || !list) return;
+
+        var cards = Array.prototype.slice.call(list.querySelectorAll(".post-card"));
+
+        function normalize(text) {
+          return (text || "").toLowerCase();
+        }
+
+        input.addEventListener("input", function () {
+          var q = normalize(input.value);
+          cards.forEach(function (card) {
+            var text = normalize(card.textContent);
+            card.style.display = text.indexOf(q) !== -1 ? "" : "none";
+          });
+        });
+
+        input.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            input.value = "";
+            input.dispatchEvent(new Event("input"));
+          }
         });
       })();
     </script>
