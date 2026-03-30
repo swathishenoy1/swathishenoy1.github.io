@@ -127,11 +127,17 @@ body {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 24px;
   border-bottom: 1px solid var(--border);
   padding-bottom: 20px;
   margin-bottom: 36px;
+}
+
+.site-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .site-title {
@@ -162,7 +168,14 @@ body {
   border-radius: 999px;
   padding: 6px 12px;
   font-size: 14px;
-  min-width: 180px;
+  min-width: 220px;
+}
+
+body[data-theme="light"] .search__input,
+html[data-theme="light"] body .search__input {
+  background: #ffffff;
+  border-color: #d5cbbf;
+  box-shadow: 0 6px 14px rgba(17, 24, 39, 0.08);
 }
 
 .search__input::placeholder {

@@ -40,14 +40,14 @@
 
       <main class="content">
         <header class="site-header">
-          <div>
+          <div class="site-info">
             <div class="site-description">{{ site.description }}</div>
-          </div>
-          <nav class="site-nav">
-            <a href="{{ "/" | relative_url }}">Home</a>
             <div class="search">
               <input class="search__input" type="search" placeholder="Search articles" aria-label="Search articles">
             </div>
+          </div>
+          <nav class="site-nav">
+            <a href="{{ "/" | relative_url }}">Home</a>
             <button class="theme-toggle" type="button" aria-label="Toggle theme">
               <span class="theme-toggle__icon" aria-hidden="true">☾</span>
               <span class="theme-toggle__label">Theme</span>
