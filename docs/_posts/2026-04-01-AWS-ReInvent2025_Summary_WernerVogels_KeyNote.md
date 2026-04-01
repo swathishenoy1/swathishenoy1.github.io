@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Summary of Werner Vogels Keynote at 2025 AWS reInvent"
-categories: [GenAI][Software Engineering]
+categories: ["GenAI", "Software Engineering"]
 excerpt: "AWS re:Invent 2025, Werner Vogels Keynote Notes"
 ---
 
