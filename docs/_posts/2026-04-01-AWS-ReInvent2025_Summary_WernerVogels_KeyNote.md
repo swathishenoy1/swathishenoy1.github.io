@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Summary of Werner Vogels Keynote at 2025 AWS re:Invent"
+title: "Summary of Werner Vogels Keynote at 2025 AWS reInvent"
 categories: [GenAI][Software Engineering]
-excerpt: "AWS re:Invent 2025 — Werner Vogels Keynote Notes"
+excerpt: "AWS re:Invent 2025, Werner Vogels Keynote Notes"
 ---
 
 We are living through the convergence of multiple “golden ages” — in AI, space exploration, and robotics (as highlighted by Jeff Bezos).
